@@ -1,67 +1,61 @@
-# Anotações de Estudos de CSS
+# Animações com CSS
 
-Este repositório contém anotações sobre conceitos de CSS, especialmente focados em animações usando CSS.
-
-## Índice
-
-1. [Lição 1: HOVER](#lição-1-hover)
-2. [Lição 2: TRANSFORM](#lição-2-transform)
+Este README explica conceitos básicos de animação usando CSS, abordando três lições principais: HOVER, TRANSFORM, e TRANSITION.
 
 ## Lição 1: HOVER
 
-A pseudo-classe `:hover` é usada para ativar o estilo de um elemento quando o usuário passa o mouse sobre ele.
-
-### Exemplo de Uso
+A pseudo-classe `:hover` é usada para aplicar estilos a um elemento quando o cursor do mouse está sobre ele. Para ativar o elemento com a classe `hover`, use a seguinte sintaxe:
 
 ```css
 .btn:hover {
-  /* Estilos aplicados ao elemento quando o mouse está sobre ele */
-  color: #fff;
-  background-color: #007bff;
+    /* Estilos para o estado hover */
 }
 ```
-
-Neste exemplo, a classe `.btn:hover` aplica estilos ao elemento quando ele é "hovered", ou seja, quando o cursor do mouse está sobre ele.
 
 ## Lição 2: TRANSFORM
 
-A propriedade `transform` permite aplicar uma transformação a um elemento, como mover, escalar, girar ou distorcer.
+A propriedade `transform` permite alterar a posição, dimensão e rotação de um elemento. As alterações podem incluir:
 
-### Transformações Comuns
+- `translateY()`: Mover o elemento para cima ou para baixo.
+- `translateX()`: Mover o elemento para os lados.
 
-- **translateY()**: Move o elemento verticalmente.
-- **translateX()**: Move o elemento horizontalmente.
-- **translateZ()**: Move o elemento horizontalmente.
+**Nota:** Valores positivos movem o elemento para cima ou para a direita, enquanto valores negativos movem para baixo ou para a esquerda.
 
-### Exemplo de Uso
+## Lição 3: TRANSITION
+
+A propriedade `transition` é usada para definir a transição entre dois estados de um elemento. As propriedades de transição incluem:
+
+- `transition-property`: Define a propriedade a ser animada (exemplo: `transition-property: transform`).
+- `transition-duration`: Define a duração da transição (exemplo: `transition-duration: 1s`).
+- `transition-timing-function`: Define a curva de aceleração da transição (exemplo: `transition-timing-function: ease`).
+  - `ease`: Valor padrão.
+  - `ease-in`: Suave no início.
+  - `ease-out`: Suave no final.
+  - `ease-in-out`: Suave no início e no final.
+  - `linear`: Velocidade constante.
+- `transition-delay`: Define o atraso antes de iniciar a transição (exemplo: `transition-delay: 0.3s`).
+
+### Sintaxe
+
+É possível definir todos os quatro parâmetros em uma única linha usando a propriedade `transition`, respeitando a ordem:
 
 ```css
-/* Mover elemento para cima */
-.elemento {
-  transform: translateY(-20px);
-}
-
-/* Mover elemento para baixo */
-.elemento {
-  transform: translateY(20px);
-}
-
-/* Mover elemento para a direita */
-.elemento {
-  transform: translateX(20px);
-}
-
-/* Mover elemento para a esquerda */
-.elemento {
-  transform: translateX(-20px);
+.btn {
+    transition: transform 1s ease-in 0.3s;
+    /* ou */
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.3s;
 }
 ```
 
-### Observações
+### Aplicação a Múltiplas Propriedades
 
-- Valores positivos movem o elemento para cima ou para a direita.
-- Valores negativos movem o elemento para baixo ou para a esquerda.
+Se houver mais de uma propriedade para a qual você deseja aplicar a mesma transição, ou se deseja aplicar a transição a todas as propriedades de um elemento, use a palavra-chave `all`:
 
-## Conclusão
+.btn {
+    transition-property: all;
+}
 
-Essas são as anotações básicas sobre as pseudo-classes e propriedades de CSS focadas em animações. Compreender e aplicar esses conceitos é fundamental para criar interfaces de usuário interativas e atraentes.
+Com essas lições, você pode criar animações suaves e interativas usando apenas CSS!
