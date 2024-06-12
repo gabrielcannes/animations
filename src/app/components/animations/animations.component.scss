@@ -1,0 +1,11 @@
+.padding {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinte;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  /* ou */
+  animation: slideInLeft 1s ease-in 0.2s infinite normal none;
+}
