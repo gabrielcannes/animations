@@ -113,7 +113,7 @@ A propriedade `animation` é usada para definir a animação de um elemento. As 
   animation-duration: 1s;
   animation-timing-function: ease-in;
   animation-delay: 0.2s;
-  animation-iteration-count: infinte;
+  animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: none;
   /* ou */

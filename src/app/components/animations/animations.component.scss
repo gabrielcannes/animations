@@ -1,11 +1,26 @@
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 .padding {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  color: darkmagenta;
+  border: 10px solid darkmagenta;
+  background-color: magenta;
+  border-radius: 5px;
+
   animation-name: slideInLeft;
-  animation-duration: 1s;
+  animation-duration: 5s;
   animation-timing-function: ease-in;
   animation-delay: 0.2s;
-  animation-iteration-count: infinte;
+  animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: none;
-  /* ou */
-  animation: slideInLeft 1s ease-in 0.2s infinite normal none;
 }
