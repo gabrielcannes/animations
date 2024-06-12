@@ -21,7 +21,7 @@ A propriedade `transform` permite alterar a posição, dimensão e rotação de 
 
 **Nota:** Valores positivos movem o elemento para cima ou para a direita, enquanto valores negativos movem para baixo ou para a esquerda.
 
-## Lição 3: TRANSITION
+## Lição 4: TRANSITION
 
 A propriedade `transition` é usada para definir a transição entre dois estados de um elemento. As propriedades de transição incluem:
 
